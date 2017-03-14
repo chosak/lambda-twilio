@@ -1,0 +1,20 @@
+{
+  "name": "lambda-twilio",
+  "version": "0.0.1",
+  "description": "Make a phone call with Amazon Lambda.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/chosak/lambda-twilio.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "node-lambda": "0.8.13",
+    "twilio": "^2.11.0"
+  },
+  "scripts": {
+    "setup": "node-lambda setup",
+    "run": "node-lambda run",
+    "deploy": "node-lambda deploy"
+  }
+}
