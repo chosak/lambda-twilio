@@ -14,7 +14,7 @@
   },
   "scripts": {
     "setup": "node-lambda setup",
-    "run": "node-lambda run",
-    "deploy": "node-lambda deploy"
+    "run": "node-lambda run --configFile deploy.env",
+    "deploy": "node-lambda deploy --configFile deploy.env"
   }
 }

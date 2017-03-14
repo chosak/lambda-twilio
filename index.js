@@ -1,6 +1,7 @@
-var twilio = require('twilio');
+var twilio = require( 'twilio' );
 
-exports.handler = function (event, context) {
+exports.handler = function( event, context, callback ) {
+
   var client = new twilio.RestClient(
     process.env.TWILIO_ACCOUNT_SID,
     process.env.TWILIO_AUTH_TOKEN   
@@ -12,5 +13,8 @@ exports.handler = function (event, context) {
     from: process.env.FROM_PHONE_NUMBER,
     to: process.env.TO_PHONE_NUMBER,
     url: process.env.CALL_URL 
-  });
+  }, function( err, responseData ) {
+    callback( null, "Success!" );
+  })
+
 };
